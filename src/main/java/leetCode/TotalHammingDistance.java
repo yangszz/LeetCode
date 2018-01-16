@@ -8,15 +8,15 @@ public class TotalHammingDistance {
      * @return
      */
     public int totalHammingDistance(int[] nums) {
-        int aaa = 0, n = nums.length;
+        int total = 0, n = nums.length;
         for (int j = 0; j < 32; j++) {
             int bitCount = 0;
             for (int i = 0; i < n; i++) {
                 bitCount += (nums[i] >> j) & 1;
             }
-            aaa += bitCount * (n - bitCount);
+            total += bitCount * (n - bitCount);
         }
-        return aaa;
+        return total;
 
 
     }
